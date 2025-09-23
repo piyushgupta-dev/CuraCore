@@ -181,7 +181,7 @@ docker-compose up --build
 ---
 
 ## 📧 Contact
-- 📩 Email: *[ad4182132@gmail.com]*
-- 🔗 LinkedIn / Portfolio: *[(https://www.linkedin.com/in/akshit-rai-kakkar-75720430b/)]*
+- 📩 Email: *[piyushgupta140206@gmail.com]*
+- 🔗 LinkedIn / Portfolio: *[https://www.linkedin.com/in/piyush-gupta-0a568828b/]*
 
 💚 **Ayursutra — Transforming Panchakarma Clinics with Digital Efficiency & Ayurveda Excellence.**
