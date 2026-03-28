@@ -184,4 +184,4 @@ docker-compose up --build
 - 📩 Email: *[piyushgupta140206@gmail.com]*
 - 🔗 LinkedIn / Portfolio: *[https://www.linkedin.com/in/piyush-gupta-0a568828b/]*
 
-💚 **Ayursutra — Transforming Panchakarma Clinics with Digital Efficiency & Ayurveda Excellence.**
+
