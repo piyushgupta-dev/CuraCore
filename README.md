@@ -141,7 +141,7 @@ npm run dev # OR FastAPI: uvicorn main:app --reload
 
 cd ../frontend
 npm install
-npm start
+npm start --watch
 
 ### Run with Docker
 
