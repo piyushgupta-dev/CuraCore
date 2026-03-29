@@ -1,136 +1,154 @@
-# 🌿 Ayursutra — Panchakarma Management System  
+# 🌿 Ayursutra — Panchakarma Management System
 
-> **A modern digital solution for Panchakarma clinics** — streamlining therapy scheduling, patient records, inventory, and follow-up care while preserving the authenticity of Ayurveda.  
-
----
-
-## 📌 Project Metadata  
-- **Project Title**: Ayursutra — Panchakarma Management System  
-- **Team Name**: JM_Cura Core  
-- **Problem Statement ID**: SIH25023  
-- **Repository Link**: *[Add your repo link here]*  
+> **A modern digital solution for Panchakarma clinics** — streamlining therapy scheduling, patient records, inventory, and follow-up care while preserving the authenticity of Ayurveda.
 
 ---
 
-## 📝 Executive Summary  
-Panchakarma clinics face inefficiencies in scheduling, patient record management, inventory tracking, and follow-up care — leading to delays, errors, and poor patient experience.  
+## 📌 Project Metadata
 
-**Ayursutra** solves this by providing a secure, digital platform that:  
-- 📅 Automates therapy scheduling  
-- 📋 Digitizes patient records & consent  
-- 💊 Manages inventory with alerts  
-- 🔔 Sends pre- & post-procedure reminders  
-- 📊 Enables real-time reporting & analytics  
-
-**Impact** → Reduced wait times ⏳ | Improved compliance ✅ | Safer record management 🔒  
+- **Project Title**: Ayursutra — Panchakarma Management System
+- **Team Name**: JM_Cura Core
+- **Problem Statement ID**: SIH25023
+- **Repository Link**: _[Add your repo link here]_
 
 ---
 
-## 🎯 Goals & Objectives  
-**Primary Objectives:**  
-- Digitize Panchakarma patient records & therapy schedules.  
-- Provide therapist-friendly scheduling & session management.  
-- Ensure informed consent & outcome tracking.  
+## 📝 Executive Summary
 
-**Secondary Objectives:**  
-- Inventory & medicine stock management.  
-- Billing & payment tracking.  
-- Analytics for treatment effectiveness.  
+Panchakarma clinics face inefficiencies in scheduling, patient record management, inventory tracking, and follow-up care — leading to delays, errors, and poor patient experience.
 
----
+**Ayursutra** solves this by providing a secure, digital platform that:
 
-## ✨ Features  
-- 📅 **Automated Therapy Scheduling** (patients & practitioners)  
-- 🔔 **Notifications & Reminders** (SMS/Email/WhatsApp)  
-- 🧾 **Digital Consent Capture** with timestamp & versioning  
-- 📊 **Reports & Analytics** (CSV/PDF exportable)  
-- 💊 **Inventory Tracking** with low-stock alerts  
-- 💳 **Billing & Invoicing**  
-- 👩‍⚕️ **Therapist Dashboard** (daily roster, session notes)  
-- 📱 **Mobile-friendly UI** for patients & therapists  
+- 📅 Automates therapy scheduling
+- 📋 Digitizes patient records & consent
+- 💊 Manages inventory with alerts
+- 🔔 Sends pre- & post-procedure reminders
+- 📊 Enables real-time reporting & analytics
+
+**Impact** → Reduced wait times ⏳ | Improved compliance ✅ | Safer record management 🔒
 
 ---
 
-## 🖥️ Technology Stack  
-- **Frontend**: React (Web) + React Native / Flutter (Mobile)  
-- **Backend**: Node.js + Express / Python FastAPI  
-- **Database**: PostgreSQL (primary), Redis (cache/queues)  
-- **Storage**: AWS S3 (images & documents)  
-- **Auth**: JWT + Refresh Tokens, Role-Based Access  
-- **Integrations**: SMS/WhatsApp Gateway, Payment Gateway, Google Calendar API  
-- **Deployment**: Docker + GitHub Actions (CI/CD), AWS/GCP/DigitalOcean  
+## 🎯 Goals & Objectives
+
+**Primary Objectives:**
+
+- Digitize Panchakarma patient records & therapy schedules.
+- Provide therapist-friendly scheduling & session management.
+- Ensure informed consent & outcome tracking.
+
+**Secondary Objectives:**
+
+- Inventory & medicine stock management.
+- Billing & payment tracking.
+- Analytics for treatment effectiveness.
 
 ---
 
-## 🏗️ System Architecture (High-level)  
+## ✨ Features
+
+- 📅 **Automated Therapy Scheduling** (patients & practitioners)
+- 🔔 **Notifications & Reminders** (SMS/Email/WhatsApp)
+- 🧾 **Digital Consent Capture** with timestamp & versioning
+- 📊 **Reports & Analytics** (CSV/PDF exportable)
+- 💊 **Inventory Tracking** with low-stock alerts
+- 💳 **Billing & Invoicing**
+- 👩‍⚕️ **Therapist Dashboard** (daily roster, session notes)
+- 📱 **Mobile-friendly UI** for patients & therapists
 
 ---
 
-## 📂 Data Models  
+## 🖥️ Technology Stack
+
+- **Frontend**: React (Web) + React Native / Flutter (Mobile)
+- **Backend**: Node.js + Express / Python FastAPI
+- **Database**: PostgreSQL (primary), Redis (cache/queues)
+- **Storage**: AWS S3 (images & documents)
+- **Auth**: JWT + Refresh Tokens, Role-Based Access
+- **Integrations**: SMS/WhatsApp Gateway, Payment Gateway, Google Calendar API
+- **Deployment**: Docker + GitHub Actions (CI/CD), AWS/GCP/DigitalOcean
+
+---
+
+## 🏗️ System Architecture (High-level)
+
+---
+
+## 📂 Data Models
+
 **patients**: id, name, dob, gender, phone, email, address, blood_group, known_allergies, medical_history, aadhaar_or_identifier, created_at  
 **therapists**: id, name, qualifications, specializations, availability_slots, contact  
 **therapy_plans**: id, patient_id, prescribed_by, sessions[], start_date, end_date, notes  
 **sessions**: id, patient_id, therapist_id, therapy_type, date, start_time, end_time, notes, outcome, photos[], consent_version  
 **inventory**: id, item_name, batch_no, qty_available, reorder_level, supplier  
 **payments**: id, patient_id, amount, method, status, invoice_ref  
-**consents**: id, patient_id, consent_text_version, signed_at, signer_name  
+**consents**: id, patient_id, consent_text_version, signed_at, signer_name
 
 ---
 
-## ⚡ API Endpoints (Examples)  
-- `POST /api/auth/login` — returns JWT  
-- `POST /api/patients` — create patient  
-- `GET /api/patients/{id}` — get patient profile  
-- `GET /api/therapists/{id}/available?date=` — check availability  
-- `POST /api/bookings` — create appointment  
-- `PATCH /api/sessions/{id}` — update session notes  
-- `GET /api/reports/weekly` — aggregated data  
+## ⚡ API Endpoints (Examples)
+
+- `POST /api/auth/login` — returns JWT
+- `POST /api/patients` — create patient
+- `GET /api/patients/{id}` — get patient profile
+- `GET /api/therapists/{id}/available?date=` — check availability
+- `POST /api/bookings` — create appointment
+- `PATCH /api/sessions/{id}` — update session notes
+- `GET /api/reports/weekly` — aggregated data
 
 ---
 
-## 🖼️ UI / Wireframes  
-Screens to include:  
-- Home / Dashboard  
-- Book Appointment  
-- Patient Profile  
-- Therapist Dashboard  
-- Admin Dashboard  
-- Inventory Page  
-- Billing Page  
-- Reports Page  
-- Consent Capture UI  
+## 🖼️ UI / Wireframes
+
+Screens to include:
+
+- Home / Dashboard
+- Book Appointment
+- Patient Profile
+- Therapist Dashboard
+- Admin Dashboard
+- Inventory Page
+- Billing Page
+- Reports Page
+- Consent Capture UI
 
 ---
 
-## 🔒 Security & Privacy  
-- Encrypt sensitive fields in DB & HTTPS everywhere  
-- Role-based access control + session expiry  
-- Digital consent with timestamp & versioning  
-- Audit trail for edits to medical records  
-- Periodic encrypted backups  
+## 🔒 Security & Privacy
+
+- Encrypt sensitive fields in DB & HTTPS everywhere
+- Role-based access control + session expiry
+- Digital consent with timestamp & versioning
+- Audit trail for edits to medical records
+- Periodic encrypted backups
 
 ---
 
-## 🚀 Installation & Setup  
+## 🚀 Installation & Setup
 
+### Clone repo
 
-# Clone repo
-git clone https://github.com/your-repo-link.git
+git clone <https://github.com/your-repo-link.git>
 cd ayursutra
 
-# Backend
+### Backend
+
 cd backend
 npm install
-npm run dev   # OR FastAPI: uvicorn main:app --reload
+npm run dev # OR FastAPI: uvicorn main:app --reload
 
-# Frontend
+### Frontend
+
 cd ../frontend
 npm install
 npm start
 
-# Run with Docker
+### Run with Docker
+
 docker-compose up --build
+
 ## 🧪 Testing Plan
+
 - ✅ Unit tests for API endpoints
 - 🔄 Integration tests (booking, payment, consent)
 - 🧑‍💻 E2E tests with Playwright / Cypress
@@ -139,6 +157,7 @@ docker-compose up --build
 ---
 
 ## 📊 KPI / Success Metrics
+
 - ⏳ Reduce patient wait times by **50%**
 - 📅 Improve scheduling accuracy by **40%**
 - 📲 Reduce missed appointments by **30%**
@@ -147,6 +166,7 @@ docker-compose up --build
 ---
 
 ## 🔮 Future Scope
+
 - 🤖 AI/ML to predict therapy effectiveness
 - 📡 IoT vitals monitoring
 - 🏥 Insurance & govt health record sync
@@ -156,6 +176,7 @@ docker-compose up --build
 ---
 
 ## 🏆 Competitive Advantage
+
 - Ayurveda & Panchakarma **focused**
 - Real-time progress visualization (graphs & milestones)
 - Feedback loop to refine therapy schedules
@@ -164,6 +185,7 @@ docker-compose up --build
 ---
 
 ## 👥 Team & Contributions
+
 - **Frontend Lead** → Patient & Therapist UI
 - **Backend/API Lead** → Core APIs & Integrations
 - **Database & DevOps** → Schema, Docker, AWS Deployment
@@ -173,6 +195,7 @@ docker-compose up --build
 ---
 
 ## 📜 Compliance & Regulations
+
 - Align with India’s **DPDP Act 2023**
 - Follow **HIPAA-like principles** for patient confidentiality
 - Digital consent handling with timestamps & versioning
@@ -181,7 +204,9 @@ docker-compose up --build
 ---
 
 ## 📧 Contact
-- 📩 Email: *[piyushgupta140206@gmail.com]*
-- 🔗 LinkedIn / Portfolio: *[https://www.linkedin.com/in/piyush-gupta-0a568828b/]*
 
+- 📩 Email: _[piyushgupta140206@gmail.com]_
+- 🔗 LinkedIn / Portfolio: _[https://www.linkedin.com/in/piyush-gupta-0a568828b/]_
+  hor
 
+### Piyush Gupta
